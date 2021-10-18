@@ -1,0 +1,28 @@
+
+<div class="center">
+   <h1>check cerdit card</h1>
+  
+    <input name="creditNumber" class="input" type="text" placeholder="enter credit number" [(ngModel)]="creditNumber" (keyup)="changeCreditNumber()" >
+    <br>
+    <button name="submit" class="button" type="button" (click)="submit()" [disabled]="isSubmitDisabled">submit to check</button>
+     <br>
+    <table class="styled-table" *ngIf="responsCredit.length > 0">
+        <thead>
+            <tr>
+                <th>Credit</th>
+                <th>Fraud</th>
+                <th>Date Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of responsCredit">
+                <td>{{item.credit}}</td>
+                <td>{{item.fraud!= null? 'fraud':'not fraud'}}</td>
+                <td>{{item.date | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
