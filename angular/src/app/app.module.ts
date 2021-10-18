@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule} from "@angular/forms"; 
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Route } from '@angular/router';
-import { CardsComponent } from './cards/cards.component';
 import { CreditComponent } from './credit/credit.component';
 import { CreditService } from './service/service-credit.service';
 
